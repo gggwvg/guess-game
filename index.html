@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KE の 猜猜看</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./utils/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<h1 id="game-title"><span class="title-name-k">K</span><span class="title-name-e">E</span><span class="title-de"> の </span>猜猜看</h1>
+
+<br><br>
+
+<form id="game-form" class="layui-form" action="game.php" method="get">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">题数:</label>
+        <div class="layui-input-block">
+            <input type="radio" name="qNum" value="10" title="10" checked>
+            <input type="radio" name="qNum" value="30" title="30">
+            <input type="radio" name="qNum" value="50" title="50">
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">时间:</label>
+        <div class="layui-input-block">
+            <input type="radio" name="qTime" value="180" title="180s" checked>
+            <input type="radio" name="qTime" value="360" title="360s">
+            <input type="radio" name="qTime" value="720" title="720s">
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-danger" lay-submit lay-filter="formDemo">开始游戏 !</button>
+        </div>
+    </div>
+</form>
+
+<script src="./utils/layui/layui.js"></script>
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form();
+
+        //监听提交
+//        form.on('submit(formDemo)', function(data){
+//            layer.msg(JSON.stringify(data.field));
+//            return false;
+//        });
+    });
+</script>
+
+</body>
+</html>
